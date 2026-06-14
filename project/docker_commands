@@ -1,11 +1,42 @@
-## Docker commands used to build the application 
-# TODO: insert the docker build command
+## Docker commands used to build the application
+docker build -f Dockerfile -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs <container_id>
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:06/14/2026, 17:47:15,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:06/14/2026, 17:47:15,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:06/14/2026, 17:47:19, 172.17.0.1 - - [14/Jun/2026 17:47:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:19, 172.17.0.1 - - [14/Jun/2026 17:47:19] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:19, 172.17.0.1 - - [14/Jun/2026 17:47:19] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:06/14/2026, 17:47:32, Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:06/14/2026, 17:47:32, 172.17.0.1 - - [14/Jun/2026 17:47:32] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:32, 172.17.0.1 - - [14/Jun/2026 17:47:32] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:06/14/2026, 17:47:33, Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:06/14/2026, 17:47:33, 172.17.0.1 - - [14/Jun/2026 17:47:33] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:34, 172.17.0.1 - - [14/Jun/2026 17:47:34] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:06/14/2026, 17:47:34, Article "Kubernetes v1.20 Release Notes" retrieved!
+INFO:werkzeug:06/14/2026, 17:47:34, 172.17.0.1 - - [14/Jun/2026 17:47:34] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:34, 172.17.0.1 - - [14/Jun/2026 17:47:34] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:06/14/2026, 17:47:35, Article "CNCF Cloud Native Interactive Landscape" retrieved!
+INFO:werkzeug:06/14/2026, 17:47:35, 172.17.0.1 - - [14/Jun/2026 17:47:35] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:35, 172.17.0.1 - - [14/Jun/2026 17:47:35] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:06/14/2026, 17:47:42, 172.17.0.1 - - [14/Jun/2026 17:47:42] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:42, 172.17.0.1 - - [14/Jun/2026 17:47:42] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:06/14/2026, 17:47:48, Article "Test Post" created!
+INFO:werkzeug:06/14/2026, 17:47:48, 172.17.0.1 - - [14/Jun/2026 17:47:48] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:06/14/2026, 17:47:48, 172.17.0.1 - - [14/Jun/2026 17:47:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:06/14/2026, 17:47:48, 172.17.0.1 - - [14/Jun/2026 17:47:48] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:06/14/2026, 17:47:53, Metrics request successful
+INFO:werkzeug:06/14/2026, 17:47:53, 172.17.0.1 - - [14/Jun/2026 17:47:53] "GET /metrics HTTP/1.1" 200 -
